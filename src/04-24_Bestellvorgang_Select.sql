@@ -57,9 +57,47 @@ SELECT Preis INTO @PreisTeekanne
     WHERE Produkt.Bezeichnung = 'Teekanne';
 
 
-Select Preis, Bezeichnung FROM Produkt
+SELECT Preis, Bezeichnung FROM Produkt
     WHERE Produkt.Bezeichnung = 'Teekanne';
 
 UPDATE Produkt
     SET Preis = 61.95
     WHERE Preis = @PreisTeekanne;
+
+-- 04-24-07
+
+SELECT Vorname, Nachname, Kunde.Kunde_ID,
+       Bestellung.Bestellung_ID,
+       Produkt.Produkt_ID,
+       Produkt.Bezeichnung
+    FROM Kunde, Produkt, Bestellung
+    WHERE Vorname = 'Murat' AND
+          Nachname = 'Özel'
+    GROUP BY Produkt_ID
+    ORDER BY Bestellung_ID ASC;
+
+-- 04-24-08 A)
+
+# Anzahl der Bestellungen der Kunden ausgeben
+
+SELECT Vorname,
+       Nachname,
+       COUNT(Bestellung_ID) AS 'Anzahl der Bestellungen'
+FROM Kunde, Bestellung
+WHERE Kunde.Kunde_ID = Bestellung.Kunde_ID
+GROUP BY Kunde.Kunde_ID
+ORDER BY Kunde.Kunde_ID ASC;
+
+-- 04-24-08 B)
+
+# Gesamt-Umsatz einer Kundin ermitteln
+
+SELECT  Vorname,
+        Nachname,
+        SUM(Produkt.Preis * BestellungPosten.Anzahl) AS 'Gesamtumsatz'
+    FROM Kunde, Bestellung, BestellungPosten, Produkt
+        WHERE   Kunde.Kunde_ID = Bestellung.Kunde_ID &&
+                Bestellung.Bestellung_ID = BestellungPosten.Bestellung_ID &&
+                BestellungPosten.Produkt_ID && Produkt.Produkt_ID
+    GROUP BY Kunde.Kunde_ID
+    ORDER BY Kunde.Kunde_ID ASC;

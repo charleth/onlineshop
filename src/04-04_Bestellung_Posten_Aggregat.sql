@@ -129,13 +129,13 @@ SELECT * FROM Kunde, Adresse
 # VIEW = gespeicherte SELECT-Abfrage die einfach namentlich aufgerufen wird
 # subquery = verschachtelte, ausformulierte SELECT-Abfrage
 
-SELECT  Vorname,
-        Nachname,
+SELECT  -- Vorname,
+        -- Nachname,
         MAX(GesamtSumme) INTO @maxUmsatz
     FROM(
         SELECT
-            Vorname,
-            Nachname,
+            -- Vorname,
+            -- Nachname,
             SUM(Preis*Anzahl) AS GesamtSumme
         FROM KundeBestelltProdukt
         GROUP BY KID
@@ -144,3 +144,5 @@ SELECT  Vorname,
 SELECT BID, Vorname, Nachname, SUM(Umsatz) FROM UmsatzProBestellung
     GROUP BY BID
     HAVING SUM(Umsatz) = @maxUmsatz;
+
+select * from KundeBestelltProdukt;
