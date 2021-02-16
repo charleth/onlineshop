@@ -1,7 +1,5 @@
 use onlineshop;
 
-select '01-01_Adresse_Struktur.sql' as o;
-
 drop table if exists Kunde;
 drop table if exists Adresse;
 

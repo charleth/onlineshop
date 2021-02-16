@@ -1,9 +1,5 @@
 use onlineshop;
 
-select '01-02_Adresse_Daten.sql' as o;
-
-
-
 insert into Adresse values
 (   # 01
     null,
