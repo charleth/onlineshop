@@ -1,107 +1,105 @@
-use onlineshop;
+USE onlineshop;
 
-select '02-02_Produkt_Daten.sql' as o;
-
-insert into Produkt values
+INSERT INTO Produkt VALUES
 (
     # 1
-    null,
+    NULL,
     'Kuchen',
     3.50
 ),
 (
     # 2
-    null,
+    NULL,
     'Kekse',
     3.00
 ),
 (
     # 3
-    null,
+    NULL,
     'Teekanne',
     12.30
 ),
 (
     # 4
-    null,
+    NULL,
     'Kaffeefilter Porzellan',
     30.00
 ),
 (
     # 5
-    null,
+    NULL,
     'Kaffee (Kolumbien)',
     7.50
 ),
 (
     # 6
-    null,
+    NULL,
     'Kaffee (Äthiopien)',
     7.50
 ),
 (
     # 7
-    null,
+    NULL,
     'Grüner Tee Jasmin',
     4.50
 ),
 (
     # 8
-    null,
+    NULL,
     'Grüner Tee Sencha',
     5.60
 ),
 (
     # 9
-    null,
+    NULL,
     'Kaffee Vollautomat',
     469.99
 ),
 (
     # 10
-    null,
+    NULL,
     'Tasse schlicht',
     12.00
 ),
 (
     # 11
-    null,
+    NULL,
     'Tasse Porzellan',
     19.90
 ),
 (
     # 12
-    null,
+    NULL,
     'Tee-Set',
     25.00
 ),
 (
     # 13
-    null,
+    NULL,
     'Topfpflanze Monstera',
     20.00
 ),
 (
     # 14
-    null,
+    NULL,
     'Bonsai',
     659.60
 ),
 (
     # 15
-    null,
+    NULL,
     'ePiano',
     890.00
 ),
 (
     # 16
-    null,
+    NULL,
     'Klavierhocker',
     60.00
 ),
 (
     # 17
-    null,
+    NULL,
     'Notenset Anfänger',
     12.50
 )

@@ -1,12 +1,8 @@
-use onlineshop;
+USE onlineshop;
 
-select '01-02_Adresse_Daten.sql' as o;
-
-
-
-insert into Adresse values
+INSERT INTO Adresse VALUES
 (   # 01
-    null,
+    NULL,
     'Kleine Straße',
     '48',
     '55321',
@@ -14,7 +10,7 @@ insert into Adresse values
     'Deutschland'
 ),
 (   # 02
-    null,
+    NULL,
     'Steinplatz',
     '5 b',
     '33128',
@@ -22,7 +18,7 @@ insert into Adresse values
     'Deutschland'
 ),
 (   # 03
-    null,
+    NULL,
     'Alter Mühlen Weg',
     '15 c',
     '80312',
@@ -30,7 +26,7 @@ insert into Adresse values
     'Deutschland'
 ),
 (   # 04
-    null,
+    NULL,
     'Friedrichstraße',
     '234',
     '43195',
@@ -38,7 +34,7 @@ insert into Adresse values
     'Deutschland'
 ),
 (   # 05
-    null,
+    NULL,
     'Am Schiller Park',
     '3',
     '53314',
@@ -46,7 +42,7 @@ insert into Adresse values
     'Deutschland'
 ),
 (   # 06
-    null,
+    NULL,
     'Graue Straße',
     '13',
     '55316',
@@ -54,7 +50,7 @@ insert into Adresse values
     'Deutschland'
 ),
 (   # 07
-    null,
+    NULL,
     'Siegmud-Freud-Weg',
     '44',
     '77341',
@@ -62,7 +58,7 @@ insert into Adresse values
     'Deutschland'
 ),
 (   # 08
-    null,
+    NULL,
     'Ada-Lovelace-Platz',
     '22',
     '63201',
@@ -70,7 +66,7 @@ insert into Adresse values
     'Deutschland'
 ),
 (   # 09
-    null,
+    NULL,
     'Am Schiller Park',
     '5',
     '53314',
@@ -78,7 +74,7 @@ insert into Adresse values
     'Deutschland'
 ),
 (   # 10
-    null,
+    NULL,
     'Am Schiller Park',
     '45',
     '53314',
@@ -86,7 +82,7 @@ insert into Adresse values
     'Deutschland'
 ),
 (   # 11
-    null,
+    NULL,
     'Friedrichstraße',
     '18 c',
     '43195',
@@ -94,7 +90,7 @@ insert into Adresse values
     'Deutschland'
 ),
 (   # 12
-    null,
+    NULL,
     'Alter Mühlen Weg',
     '8',
     '43411',
@@ -102,7 +98,7 @@ insert into Adresse values
     'Deutschland'
 ),
 (   # 13
-    null,
+    NULL,
     'Friedrichstraße',
     '110',
     '10345',
@@ -110,7 +106,7 @@ insert into Adresse values
     'Deutschland'
 ),
 (   # 14
-    null,
+    NULL,
     'Friedrichstraße',
     '9',
     '10345',
@@ -118,7 +114,7 @@ insert into Adresse values
     'Deutschland'
 ),
 (   # 15
-    null,
+    NULL,
     'Friedrichstraße',
     '211 a',
     '10345',

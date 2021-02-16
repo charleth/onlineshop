@@ -1,4 +1,4 @@
-use onlineshop;
+USE onlineshop;
 
 /*
  update Adresse
@@ -8,16 +8,16 @@ use onlineshop;
  ;
  */
 
-select * from Adresse;
+SELECT * FROM Adresse;
 
-select Strasse, Hausnummer from Adresse;
+SELECT Strasse, Hausnummer FROM Adresse;
 
-select * from Adresse
-    where Postleitzahl = '33127'
+SELECT * FROM Adresse
+    WHERE Postleitzahl = '33127'
 ;
 
 # Alle Adressen der Friedrichstrasse
 
-select * from Adresse
-where Strasse = 'Friedrichstraße'
+SELECT * FROM Adresse
+WHERE Strasse = 'Friedrichstraße'
 ;
