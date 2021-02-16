@@ -57,9 +57,21 @@ SELECT Preis INTO @PreisTeekanne
     WHERE Produkt.Bezeichnung = 'Teekanne';
 
 
-Select Preis, Bezeichnung FROM Produkt
+SELECT Preis, Bezeichnung FROM Produkt
     WHERE Produkt.Bezeichnung = 'Teekanne';
 
 UPDATE Produkt
     SET Preis = 61.95
     WHERE Preis = @PreisTeekanne;
+
+-- 04-24-07
+
+SELECT Vorname, Nachname, Kunde.Kunde_ID,
+       Bestellung.Bestellung_ID,
+       Produkt.Produkt_ID,
+       Produkt.Bezeichnung
+    FROM Kunde, Produkt, Bestellung
+    WHERE Vorname = 'Murat' AND
+          Nachname = 'Özel'
+    GROUP BY Produkt_ID
+    ORDER BY Bestellung_ID ASC;
