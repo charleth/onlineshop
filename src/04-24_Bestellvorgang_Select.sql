@@ -48,7 +48,7 @@ SELECT Vorname, Nachname, GeburtsDatum
 -- 04-24-05
 
 UPDATE Produkt
-    SET Preis = (Preis*1.25);
+    SET Preis = (Preis*1.1);
 
 -- 04-24-06
 
@@ -101,3 +101,14 @@ SELECT  Vorname,
                 BestellungPosten.Produkt_ID && Produkt.Produkt_ID
     GROUP BY Kunde.Kunde_ID
     ORDER BY Kunde.Kunde_ID ASC;
+
+-- 04-24-08 C)
+
+SELECT  Vorname,
+        Nachname,
+        Bestellung.Bestellung_ID,
+        Datum AS 'Bestell-Datum',
+        SUM(Preis*Anzahl) AS UmsatzProBestellung
+    FROM Kunde, Bestellung, BestellungPosten, Produkt
+    WHERE Bestellung.Kunde_ID = Kunde.Kunde_ID AND
+
