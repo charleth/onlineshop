@@ -110,5 +110,10 @@ SELECT  Vorname,
         Datum AS 'Bestell-Datum',
         SUM(Preis*Anzahl) AS UmsatzProBestellung
     FROM Kunde, Bestellung, BestellungPosten, Produkt
-    WHERE Bestellung.Kunde_ID = Kunde.Kunde_ID AND
-
+    WHERE   Bestellung.Kunde_ID = Kunde.Kunde_ID AND
+            BestellungPosten.Bestellung_ID = Bestellung.Bestellung_ID AND
+            BestellungPosten.Produkt_ID = Produkt.Produkt_ID
+    GROUP BY Bestellung.Bestellung_ID
+    HAVING  UmsatzProBestellung > 1000 AND
+            UmsatzProBestellung < 10000
+    ORDER BY UmsatzProBestellung DESC;
