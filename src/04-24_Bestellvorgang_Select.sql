@@ -74,7 +74,7 @@ SELECT Vorname, Nachname, Kunde.Kunde_ID,
     WHERE Vorname = 'Murat' AND
           Nachname = 'Özel'
     GROUP BY Produkt_ID
-    ORDER BY Bestellung_ID ASC;
+    ORDER BY Bestellung_ID;
 
 -- 04-24-08 A)
 
@@ -86,7 +86,7 @@ SELECT Vorname,
 FROM Kunde, Bestellung
 WHERE Kunde.Kunde_ID = Bestellung.Kunde_ID
 GROUP BY Kunde.Kunde_ID
-ORDER BY Kunde.Kunde_ID ASC;
+ORDER BY Kunde.Kunde_ID;
 
 -- 04-24-08 B)
 
@@ -100,7 +100,7 @@ SELECT  Vorname,
                 Bestellung.Bestellung_ID = BestellungPosten.Bestellung_ID &&
                 BestellungPosten.Produkt_ID && Produkt.Produkt_ID
     GROUP BY Kunde.Kunde_ID
-    ORDER BY Kunde.Kunde_ID ASC;
+    ORDER BY Kunde.Kunde_ID;
 
 -- 04-24-08 C)
 
